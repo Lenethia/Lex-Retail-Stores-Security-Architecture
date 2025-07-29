@@ -28,10 +28,6 @@ The project focuses on designing and assessing a cybersecurity architecture for 
 /docs/ - Final report document(s), presentation slides
 README.md - This main project overview and guide
 
-yaml
-Copy
-Edit
-
 ---
 
 ## How to Use This Repository
