@@ -33,7 +33,7 @@ These risks will be prioritised for mitigation and further testing in subsequent
 
 ## Screenshot
 
-Please refer to the screenshot file:  
+The complete LexSecure Risk Matrix is visualised in the screenshot below:  
 ![LexSecure Risk Matrix](./Step2_LexSecure_RiskMatrix.png)
 
 This shows the full risk matrix table with colour coding for risk levels.
