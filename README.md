@@ -1,65 +1,79 @@
-# LexSecure SME Security Architecture Project
+# Cybersecurity Architecture for Lex Retail Stores
 
-## Project Overview
-
-This repository contains all deliverables and documentation for the **Security Architecture for an SME Using NIST CSF and ISO/IEC 27001** project, completed as part of the Global Cybersecurity Remote Internship.
-
-The project focuses on designing and assessing a cybersecurity architecture for **LexSecure Compliance Firm**, a Legal-Tech SME operating in Southern and West Africa with 50 employees. The goal is to align security controls with industry standards while maintaining usability and affordability.
+This repository contains a group cybersecurity project for the  Wilses Global Cybersecurity Remote Internship. Our team was tasked with designing a realistic, risk-based security architecture for an SME, using the NIST Cybersecurity Framework (CSF) and aligning recommendations to ISO/IEC 27001:2022 controls.
 
 ---
 
-## Team Members & Roles
+## SME Profile: Lex Retail Stores
 
-| Member              | Assigned Steps           | Responsibilities                                                                                   |
-|---------------------|-------------------------|--------------------------------------------------------------------------------------------------|
-| Lenethia (Team Lead)| 1, 2, 7, 10, 11         | SME profile, risk assessment, NIST-ISO mapping, risk-based testing plan, final report & presentation integration |
-| Robert              | 3, 6                    | Asset inventory, system scans, review of existing security controls                               |
-| Prosper             | 4, 8                    | Vulnerability scanning, detection & response capabilities                                        |
-| Precious            | 5, 9                    | Cybersecurity awareness training, incident communication strategy                                |
-
----
-
-## Repository Structure
-
-/lenethia/ - Risk matrix, SME profile, framework mappings, testing plan
-/robert/ - Asset inventory, network scans, Snort configurations
-/prosper/ - Vulnerability reports, IDS alerts, detection logs
-/precious/ - Training materials, communication flowcharts, incident templates
-/docs/ - Final report document(s), presentation slides
-README.md - This main project overview and guide
+- Company Type: Online retail startup (marketplace model like Amazon)  
+- Size: 20 employees  
+- Cybersecurity Maturity: No existing cybersecurity program, policies, or dedicated personnel  
+- Budget: Extremely limited (relying mostly on free tools or basic paid plans)  
+- Business Model: Customers buy goods online; independent vendors register and sell through the platform
 
 ---
 
-## How to Use This Repository
+## IT Infrastructure Summary
 
-- Each team member is responsible for uploading their own findings, files, and screenshots into their assigned folders.
-- Final consolidated reports and presentations are saved in the `/docs/` folder.
-- Files can include Word documents, PDFs, Excel sheets, screenshots (PNG/JPG), CSV logs, and markdown files.
-- Clear and descriptive commit messages are encouraged (e.g., "Added Nessus scan report - Prosper").
+- Website Platform: WordPress + WooCommerce on shared hosting  
+  - Accepts online payments via Stripe and PayFast  
+  - No security plugins, firewall, or malware scanner installed  
+  - SSL certificate enabled (basic level)  
+
+- Cloud & Data Services:  
+  - Google Workspace (Gmail, Drive, Meet, Docs)  
+  - Vendor and order tracking done in Google Sheets  
+  - No encryption, classification, or backup system  
+
+- Employee Devices:  
+  - 10 shared laptops (Windows 10/11 and macOS)  
+  - Unmanaged, no endpoint protection or patching  
+  - Shared across shifts, increasing insider and malware risk  
+
+- Vendor Access:  
+  - Vendors manage listings through WordPress portal  
+  - No vetting, validation, or MFA  
+  - Poor password hygiene  
+
+- Customer & Payment Data:  
+  - WooCommerce stores customer PII (name, email, billing info)  
+  - Some partial card data depending on plugin config  
+  - No tokenisation, retention policy, or POPIA/GDPR compliance  
+
+- Network & Access:  
+  - Accessed via personal/home Wi-Fi  
+  - No VPN, no segmentation  
+  - Shared admin credentials, no logging or monitoring  
 
 ---
 
-## Tools & Software Used
+## Key Risks Identified
 
-- Nmap, Netdiscover (Asset discovery)
-- Nessus, OpenVAS (Vulnerability scanning)
-- Snort, Wazuh, Wireshark (IDS and network monitoring)
-- Google Sheets, Microsoft Excel (Risk matrix)
-- Canva, Lucidchart (Training materials and diagrams)
-- Microsoft Word, PowerPoint (Reports and presentations)
-
----
-
-## Contact & Communication
-
-- For questions or updates, please reach out to **Lenethia** (Team Lead).  
-- Collaboration is ongoing via **WhatsApp and Zoom meetings**.  
-- Repository access is currently **private** and will be made public upon project completion.
+- Customer and vendor PII exposed due to lack of data protection  
+- Poor access controls and shared credentials  
+- No endpoint or network security  
+- No logging, monitoring, or incident detection  
+- No security awareness or training across staff or vendors  
 
 ---
 
-## Next Steps
+## Project Objective
 
-- Upload individual step deliverables in your respective folders.
-- Regularly pull and push updates to keep all files current.
-- Prepare for final report compilation and presentation rehearsal.
+To develop a practical cybersecurity architecture tailored to Lex Retail Stores, using the NIST CSF's five functions (Identify, Protect, Detect, Respond, Recover) and mapping controls to ISO/IEC 27001. All controls are chosen with the startup’s low budget and lack of maturity in mind.
+
+---
+
+## Project Structure & Team Roles
+
+```plaintext
+lex-retail-cybersecurity/
+│
+├── README.md                  ← Project overview (this file)
+├── Final-Report/              ← Combined PDF report for submission
+├── Presentation/              ← PowerPoint slides for each team member
+│
+├── Lenethia/                  ← SME profile, risk matrix, ISO mapping, test strategy, final assembly
+├── Robert/                    ← Asset inventory, current controls review
+├── Prosper/                   ← Vulnerability scan, detection/response tools
+├── Precious/                  ← Awareness plan, incident communication
