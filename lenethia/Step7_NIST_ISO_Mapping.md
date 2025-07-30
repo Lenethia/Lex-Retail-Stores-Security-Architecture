@@ -18,7 +18,7 @@ The NIST CSF provides a flexible framework that helps identify and prioritise cy
 
 ### Mapping Screenshot
 
-Below is the embedded screenshot of the updated NIST–ISO mapping matrix from our team’s shared documentation:
+Below is the embedded screenshot of the updated NIST–ISO mapping matrix:
 
 ![NIST–ISO Mapping Screenshot](./Step7_NIST_ISO_Mapping_LexRetail.png)
 
