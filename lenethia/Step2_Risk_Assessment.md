@@ -28,6 +28,9 @@ Lex Retail Stores is an online retail startup with 20 employees and no existing 
 - **Lack of monitoring**: No visibility into unauthorised access or changes.
 - **Regulatory non-compliance**: No adherence to POPIA or GDPR.
 
+  ### Risk Matrix Screenshot
+  ![Step 2 Risk Matrix](./Step2_RiskMatrix_LexRetail.png)
+
 ### Next Steps
 
 These risks will guide the mapping of NIST CSF controls (Step 7) and inform which controls from ISO/IEC 27001 are critical to implement first. Key risks will also be prioritised in the testing and mitigation plan (Step 10).
