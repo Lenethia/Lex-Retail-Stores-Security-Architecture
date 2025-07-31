@@ -45,10 +45,99 @@ The above image shows a simulated nmap logic type scan showing that http port 80
 The above shows the presence of an open port on port 21 ftp and this can also be show on an nmap scan output but am substituting the idea with this approach because nmap scans can’t be done in packet tracer.<br />
 <h3>An Asset Table (Simulated Results)</h3>
 
-| table | table2 |
-|.......|........|
+| 🌐 IP Address  | 💻 Device        | 🖥️ OS (Assumed)   | ⚙️ Services Detected        | 📝 Notes                   |
+|----------------|------------------|-------------------|-----------------------------|----------------------------|
+| `192.168.1.10` | 🛒 POS Terminal   | 🪟 Windows 10      | 🟢 ICMP only                | Basic endpoint             |
+| `192.168.1.11` | 👨‍💼 Admin PC     | 🪟 Windows 11      | 🟢 ICMP only                | 🔐 High-privileged user    |
+| `192.168.1.12` | 📦 Inventory PC  | 🐧 Ubuntu Linux    | 🟢 ICMP only                | 📁 Stores inventory logs   |
+| `192.168.1.20` | 🖥️ Server         | 🐧 Linux Server    | 🟠 FTP (21)<br>🌐 HTTP (80) | 🚫 No firewall detected    |
 
+<h3>B. Asset Discovery (Nmap + Netdiscover) Done on kali for real world scenario</h3>
+<h3>Note this is still a simulation event.</h3>
 
+- <b>Public IP scanned: (45.33.32.156) nmap Ip address.</b>
+- <b>Results Summary:</b>
+This result shows information on the open port, filtered port meaning presence of possible firewalls or closed ports, web server running, WordPress platform detected if available and dns server records.
+
+<br />
+<p align="center">
+Nmap Scan Result: <br/>
+<img src="https://imgur.com/uytUaGJ.png="cybersecurityarchitect"/>
+<br />
+<br />
+
+- <b>Internal IP scan (Netdiscover results):</b>
+This result was done based on a simulation and certain information’s were withheld for privacy reasons and 3 hosts were discovered.
+
+<br />
+<p align="center">
+Netdiscover Scan Results: <br/>
+<img src="https://imgur.com/e3ra46v.png="cybersecurityarchitect"/>
+<br />
+<br />
+<h3>C. Asset Classification Table</h3>
+
+| 🏷️ Asset Name     | 💽 Type             | 🌐 IP Address     | 🧩 Role                       | 🔐 Data Sensitivity        |
+|-------------------|---------------------|-------------------|-------------------------------|----------------------------|
+| `lexretail.com`   | 🌍 Web Server        | `147.93.57.86`    | Hosts customer-facing<br>site | 🔴 High (PII, credentials) |
+| Admin Workstation | 💻 Endpoint (PC)     | `192.168.0.12`    | Backend access                | 🟠 Medium                  |
+| POS Terminal      | 🧾 IoT Device        | `192.168.0.18`    | Sales transaction             | 🟠 Medium                  |
+| MySQL Server      | 🗄️ Database Backend  | `192.168.0.10`    | Stores user/vendor<br>data    | 🔴 High (PII, payment info) |
+
+<h3>NB: This is a fictional scenario but a standard professional procedure explaining all the possible found asset in lex retail stores and further expanded assets would include the following below.</h3>
+<h3>Expanded Asset Classification – Lex Retail Stores.</h3>
+This section goes beyond IPs and scan data and helps show what Lex Retail really owns and needs to protect, grouped by categories:
+
+<br />
+<h3>1. Hardware Assets</h3>
+
+| 🏷️ Asset                  | ⚙️ Function               | 📝 Notes                                       |
+|---------------------------|---------------------------|------------------------------------------------|
+| 🧑‍💼 Admin Workstations    | Used by staff to manage site | ⚠️ High risk of phishing/malware               |
+| 🛒 POS Terminals          | Payment processing         | 💳 May store card data or sync to cloud        |
+| 🌐 Routers/Switches       | Network backbone           | 🚪 Gateway to internet — critical for uptime   |
+| 💾 Backup Drives / NAS    | Offline/online backups     | 🔒 Needs encryption & physical control         |
+| 📱 Personal Devices (BYOD)| Staff phones, laptops      | 🚨 Likely unmanaged — serious attack vector     |
+
+<h3>2. Software & Platform Assets</h3>
+
+| 💻 Platform              | 🧩 Use                            | ⚠️ Risk                                            |
+|--------------------------|-----------------------------------|---------------------------------------------------|
+| 🌐 WordPress CMS         | Hosts main retail website         | 🌍 Exposed to internet — plugin abuse             |
+| 🗄️ MySQL Database        | Stores user/vendor/payment data   | 🔐 PII and business-critical info                 |
+| 🛒 WooCommerce Plugin    | Handles orders and carts          | 💳 Payment-related logic                          |
+| 🧑‍💼 Vendor Dashboard     | Custom-coded management tool      | 🚫 May lack proper access control                 |
+| 📧 Email Server/Accounts | Communications                    | 🎯 Phishing target + business data exposure       |
+
+<h3>3. Data Assets</h3>
+
+| 🧬 Data Type              | 📍 Location                          | 🔐 Sensitivity                         |
+|--------------------------|--------------------------------------|----------------------------------------|
+| 🧑‍🤝‍🧑 Customer PII         | 🗄️ WordPress DB, WooCommerce         | 🔴 High (GDPR, privacy laws)           |
+| 💳 Payment Info (tokens)  | 🔌 WooCommerce or 3rd-party plugin   | 🔴 High (PCI compliance required)      |
+| 🧑‍💼 Vendor Account Data   | 🗃️ MySQL or cloud DB                 | 🟠 Medium to High                      |
+| 📊 Sales Reports          | 🖥️ Admin PC or ☁️ cloud spreadsheets | 🟠 Medium                              |
+| ⚙️ Website Config Files   | 📁 Server root folders                | 🟠 Medium (can expose paths/API keys)  |
+
+<h3>D. WordPress Security Findings</h3>
+A security check was performed on the Lex Retail WordPress admin panel (simulated instance). The following weaknesses were identified:
+
+<br />
+<h3>Missing Security Controls:</h3>
+
+- <b>No Firewall Plugin Installed: Wordfence or similar tools not active to block malicious traffic.</b>
+- <b>No Two-Factor Authentication (2FA): Admin login panel is accessible via /wp-admin with only single-factor login.</b>
+- <b>Outdated Plugins Detected: WooCommerce and other plugins were several versions behind, exposing potential known CVEs.</b>
+- <b>No Backup or Hardening Plugin Active: No scheduled backup system or security hardening plugin like iThemes Security.</b>
+
+<h3>Observed Risk Summary:</h3>
+
+| 🕵️ Finding             | ⚠️ Risk   | 💥 Impact                                |
+|------------------------|-----------|------------------------------------------|
+| 🚫 No 2FA              | 🔴 High   | Easy brute-force or credential stuffing  |
+| 🔥 No Firewall Plugin  | 🔴 High   | No defense against bot/scan attacks      |
+| 🧩 Outdated Plugins     | 🟠 Medium | Vulnerable to known exploits             |
+| 💾 No Backup Tool       | 🟠 Medium | No recovery if site is compromised       |
 
 <!--
  ```diff
