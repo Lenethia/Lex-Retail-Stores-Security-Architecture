@@ -1,1 +1,12 @@
+## Simulated Vulnerability Report – Employee Laptop 1
+
+- OS: Windows 10 Home
+- Antivirus: None
+- Disk Encryption: Not enabled
+- Patch Status: Last update 6 months ago
+- User Accounts: Shared login, no password complexity
+## Risks:
+- High risk of malware infection
+- Susceptible to data theft if lost
+- No endpoint protection
 
