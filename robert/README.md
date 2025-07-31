@@ -45,38 +45,10 @@ The above image shows a simulated nmap logic type scan showing that http port 80
 The above shows the presence of an open port on port 21 ftp and this can also be show on an nmap scan output but am substituting the idea with this approach because nmap scans can’t be done in packet tracer.<br />
 <h3>An Asset Table (Simulated Results)</h3>
 
-| table | table
-Code write up adding Views: <br/>
-<img src="https://imgur.com/S0eU0ty.png="Python"/>
-<br />
-<br />
-Running the server: <br/>
-<img src="https://imgur.com/Fo6ftr0.png="Python"/>
-<br />
-<br />
-Confirmation from the Browser: <br/>
-<img src="https://imgur.com/zfRbnwo.png="Python"/>
-<br />
-<br />
-Server response: <br/>
-<img src="https://imgur.com/uooN2iv.png="Python"/>
-<br />
-<br />
-Using Html Templates: <br/>
-<img src="https://imgur.com/3keRYCh.png="Python"/>
-<br />
-<br />
-Re-edit the Views: <br/>
-<img src="https://imgur.com/TybtFu9.png="Python"/>
-<br />
-<br />
-Response from Server Confirming Html Templates: <br/>
-<img src="https://imgur.com/jn80ZZa.png="Python"/>
-<br />
-<br />
-Confirmation from the Browser on the Html With Source Code: <br/>
-<img src="https://imgur.com/W30nXqe.png" height="80%" width="80%" alt="Python"/>
-</p>
+| table | table2 |
+|.......|........|
+
+
 
 <!--
  ```diff
