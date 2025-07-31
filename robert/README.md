@@ -71,7 +71,7 @@ This result was done based on a simulation and certain information’s were with
 
 <br />
 <p align="center">
-Netdiscover Scan Results: <br/>
+Netdiscover Scan Result: <br/>
 <img src="https://imgur.com/e3ra46v.png="cybersecurityarchitect"/>
 <br />
 <br />
@@ -138,6 +138,38 @@ A security check was performed on the Lex Retail WordPress admin panel (simulate
 | 🔥 No Firewall Plugin  | 🔴 High   | No defense against bot/scan attacks      |
 | 🧩 Outdated Plugins     | 🟠 Medium | Vulnerable to known exploits             |
 | 💾 No Backup Tool       | 🟠 Medium | No recovery if site is compromised       |
+
+<p align="center">
+Wordpress Scan Result: <br/>
+<img src="https://imgur.com/GOCTbLY.png="cybersecurityarchitect"/>
+<br />
+<br />
+
+<h3>4. ISO/IEC 27001:2022 Alignment – Control A.5.9</h3>
+<h3>Control A.5.9 requires organizations to:</h3>
+“Identify and document inventories of assets relevant to information processing and associated information systems.”
+
+<br />
+<h3>This inventory satisfies baseline compliance by:</h3>
+
+- <b>Identifying and documenting all critical and supporting assets.</b>
+- <b>Mapping asset roles and data classification.</b>
+- <b>Supporting future control implementation (e.g., protection, monitoring, access restriction).</b>
+- <b>Assign Asset Ownership.</b>
+- <b>Track Asset Lifecycle.</b>
+
+<h3>Purpose of This Control:</h3>
+
+- <b>Ensure all critical assets (devices, software, data, etc.) are known, tracked, and assigned ownership.</b>
+- <b>Enable proper risk management, incident response, and protection measures.</b>
+
+<h3>5. Next Steps</h3>
+
+- <b>Implement a formal asset inventory register in spreadsheet or CMDB tool.</b>
+- <b>Schedule regular rescans (monthly/quarterly) to detect unauthorized devices.</b>
+- <b>Apply WordPress hardening and install firewall + 2FA plugins.</b>
+- <b>Tag high-risk assets for prioritized protection in the next project phase.</b>
+
 
 <!--
  ```diff
