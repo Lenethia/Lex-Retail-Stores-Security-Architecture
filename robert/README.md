@@ -170,6 +170,65 @@ Wordpress Scan Result: <br/>
 - <b>Apply WordPress hardening and install firewall + 2FA plugins.</b>
 - <b>Tag high-risk assets for prioritized protection in the next project phase.</b>
 
+<h3>Step 6: Control Review – Endpoint Protection, Access Control, MFA, Encryption</h3>
+Lex Retail Stores’ current protective measures were reviewed, focusing on role-based access control (RBAC), data encryption, antivirus use, patch management, and multi-factor authentication (MFA). The review highlights both implemented and missing controls based on ISO/IEC 27001:2022 standards, particularly:
+
+- <b>A.5.17 – Authentication Information.</b>
+- <b>A.5.18 – Access Rights.</b>
+- <b>A.8.24 – Use of Cryptography.</b>
+<br />
+
+Lex Retail Stores’ current protective measures highlights:
+
+- <b>Who can access what (Access Control / RBAC).</b>
+- <b>How accounts are secured (Authentication / MFA).</b>
+- <b>How devices are protected (Antivirus / Endpoint Security).</b>
+- <b>How data is protected (Encryption / Patching).</b>
+<br />
+
+<h3>Findings:</h3>
+
+### Step 6: Control Review – Summary Table
+
+| 🔐 Control Area                   | 📋 Current State / Plan                                | ⚠️ Gaps Identified                                             |
+|----------------------------------|--------------------------------------------------------|----------------------------------------------------------------|
+| 🧑‍💼 Role-Based Access Control (RBAC) | Basic role assignment in Google Workspace              | No clear privilege separation for admin vs staff               |
+| 🔒 Encryption                    | TLS for email, HTTPS enforced on website               | No endpoint disk encryption (BitLocker/FileVault)              |
+| 🛡️ Antivirus & Patching         | Built-in OS antivirus active (Windows Defender)        | No centralized antivirus control, irregular patching           |
+| 🔑 Multi-Factor Authentication (MFA)| Not enabled across all Google accounts               | High-risk: Accounts accessible with just passwords             |
+| 📱 Mobile Device Management (MDM) | Not implemented                                        | No enforcement on BYOD or company-issued mobile devices        |
+
+<h3>Screenshot Evidence:</h3>
+A screenshot from the Google Workspace Admin Console shows:
+
+- <b>MFA not enforced for all accounts.</b>
+- <b>Weak RBAC configuration (e.g., multiple staff accounts with admin privileges).</b>
+- <b>Risk dashboard displaying account exposure alerts.</b>
+<br />
+Screenshot from a Windows system shows:
+- <b>BitLocker encryption status set to "Off" or "Not enabled".</b>
+- <b>Windows Defender either turned off or showing "At risk" status.</b>
+- <b>No third-party antivirus or patch management platform detected.</b>
+- <bNo MDM client or policy found on staff device, confirming lack of endpoint control.</b>
+<br />
+
+<p align="center">
+Google Workspace Admin Console: <br/>
+<img src="https://imgur.com/OWdozTt.png="cybersecurityarchitect"/>
+<br />
+<br />
+
+<p align="center">
+Windows system: <br/>
+<img src="https://imgur.com/kknR0dt.png="cybersecurityarchitect"/>
+<br />
+<br />
+
+<h3>Tools Used:</h3>
+
+- <b>Google Workspace Admin Console – Used to review RBAC settings, MFA status, and risk dashboard alerts.</b>
+- <b>Windows Security Settings – Used to check antivirus status, BitLocker encryption, and device protection.</b>
+- <b>Manual Evaluation / Audit Review – Compared security configurations against ISO/IEC 27001:2022 controls (A.5.17, A.5.18, A.8.24).</b>
 
 <!--
  ```diff
