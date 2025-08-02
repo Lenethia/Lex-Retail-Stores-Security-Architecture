@@ -106,8 +106,8 @@ Precious
 - Team presentation (PPT)
   
 **Final PowerPoint Presentation:**  
-[Lex-Retail-Stores-Security-Architecture/docs/Final_Team-Project.pptx](docs/Final_Team-Project.pptx)
-
+Lex-Retail-Stores-Security-Architecture
+[Click here to download the final presentation](docs/Final_Team-Project.pptx
 
 ## Project Completion
 
