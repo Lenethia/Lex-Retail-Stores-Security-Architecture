@@ -4,7 +4,7 @@ This repository contains the final team project for the Wilses Global Cybersecur
 
 ## SME Profile: Lex Retail Stores
 
-- Company Type: Online retail startup (marketplace model similar to Amazon)
+- Company Type: Online retail startup
 - Size: 20 employees
 - Cybersecurity Maturity: None (no policies, no controls, no IT staff)
 - Budget: Extremely limited (free/open-source tools or entry-level paid tiers)
@@ -26,7 +26,7 @@ Cloud & Data Services:
 - No encryption or backup system
 
 Employee Devices:
-- 10 shared laptops (Windows/macOS) used in shifts
+- 10 shared laptops (Windows) used in shifts
 - No endpoint protection, patching, or device management (MDM)
 
 Vendor Access:
@@ -60,7 +60,6 @@ To develop a practical, risk-based cybersecurity architecture tailored to a zero
 lex-retail-cybersecurity/
 │
 ├── README.md ← This file (Project overview)
-├── Final-Report/ ← Final combined PDF report
 ├── Presentation/ ← PowerPoint slides
 │
 ├── Lenethia/ ← Risk matrix, ISO mapping, testing, final edits
