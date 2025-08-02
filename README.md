@@ -103,7 +103,11 @@ Precious
 - Visual summaries: asset inventory, control coverage, matrix graphics  
 - Realistic simulations: phishing, vulnerability scans, detection  
 - Cybersecurity awareness and IR policy draft  
-- Final written report (PDF) and team presentation (PPT)
+- Team presentation (PPT)
+  
+**Final PowerPoint Presentation:**  
+[Lex-Retail-Stores-Security-Architecture/docs/Final_Team-Project.pptx](docs/Final_Team-Project.pptx)
+
 
 ## Project Completion
 
