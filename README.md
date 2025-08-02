@@ -105,9 +105,7 @@ Precious
 - Cybersecurity awareness and IR policy draft  
 - Team presentation (PPT)
   
-**Final PowerPoint Presentation:**  
-Lex-Retail-Stores-Security-Architecture
-[Click here to download the final presentation](docs/Final_Team-Project.pptx
+**Final PowerPoint Presentation:**  [Click here to download the final presentation](docs/Final_Team-Project.pptx
 
 ## Project Completion
 
