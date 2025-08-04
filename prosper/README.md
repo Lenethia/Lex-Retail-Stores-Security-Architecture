@@ -16,3 +16,11 @@ Step 4: Threat and Vulnerability Scanning
 
 
 Aligned Standard: ISO/IEC 27001:2022 – Control A.5.4
+
+<img width="603" height="9" alt="image" src="https://github.com/user-attachments/assets/e35b4b27-3aee-4dd8-af77-fe3988ff987e" />
+
+
+1. Used Xampp to create a php database called "lex_retail".
+   
+
+3. 
